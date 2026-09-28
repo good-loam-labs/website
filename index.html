@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GoodLoamLabs — request a demo.">
+  <title>GoodLoamLabs</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <canvas id="waves" aria-hidden="true"></canvas>
+
+  <main id="content">
+    <h1>GoodLoamLabs</h1>
+    <p class="tagline">leave your email to get a demo</p>
+
+    <div class="stage">
+      <form id="demo-form" novalidate>
+        <label for="email" class="sr-only">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required>
+        <!-- honeypot: bots fill it, humans never see it -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp">
+        <button type="submit">Request demo</button>
+      </form>
+      <p id="thanks" class="thanks" role="status" aria-live="polite"></p>
+    </div>
+    <p id="form-status" class="status" role="status" aria-live="polite"></p>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
