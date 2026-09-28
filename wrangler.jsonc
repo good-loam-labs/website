@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "goodloam-email-api",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-09-28",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "ALLOWED_ORIGINS": "https://goodloam.com"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "goodloam-emails",
+      "database_id": "2f176df9-281e-439f-a99b-e2048153cfe7",
+      "migrations_dir": "worker/migrations"
+    }
+  ]
+}
