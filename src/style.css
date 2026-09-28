@@ -41,11 +41,13 @@ canvas {
 
 h1 {
   font-family: var(--serif);
-  font-size: clamp(3rem, 12vw, 6rem);
+  /* ~9em wide with the tracking, so 9.5vw keeps it inside a phone's 16px gutters */
+  font-size: clamp(1.75rem, 9.5vw, 6rem);
   font-weight: 400;
   color: var(--fg);
   letter-spacing: 0.15em;
-  margin-bottom: 0.3em;
+  /* cancel the trailing tracking after the last letter so the word stays centered */
+  margin: 0 -0.15em 0.3em 0;
 }
 
 .tagline {
@@ -192,6 +194,8 @@ form.gone { visibility: hidden; opacity: 0; }
 }
 
 .status.error { color: rgba(240, 160, 150, 0.85); }
+
+.nowrap { white-space: nowrap; }
 
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
